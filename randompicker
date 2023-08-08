@@ -1,0 +1,8 @@
+import random
+
+def random_picker(options):
+    random_choice = random.choice(options)
+    print(f"The randomly picked option is: {random_choice}")
+
+options = input("Enter options separated by commas: ").split(',')
+random_picker(options)

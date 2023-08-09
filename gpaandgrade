@@ -1,0 +1,33 @@
+def calculate_cgpa(percentage):
+    if percentage >= 91:
+        return 10.0, 'A1'
+    elif percentage >= 81:
+        return 9.0, 'A2'
+    elif percentage >= 71:
+        return 8.0, 'B1'
+    elif percentage >= 61:
+        return 7.0, 'B2'
+    elif percentage >= 51:
+        return 6.0, 'C1'
+    elif percentage >= 41:
+        return 5.0, 'C2'
+    elif percentage >= 33:
+        return 4.0, 'D'
+    else:
+        return 0.0, 'E1 (Fail)'
+
+
+def main():
+    total_marks = float(input("Enter the total marks: "))
+    marks_obtained = float(input("Enter the marks obtained: "))
+
+    percentage = (marks_obtained / total_marks) * 100
+    print(f"Percentage: {percentage:.2f}%")
+
+    cgpa, grade = calculate_cgpa(percentage)
+    print(f"CGPA: {cgpa:.2f}")
+    print(f"Grade: {grade}")
+
+
+if __name__ == "__main__":
+    main()
